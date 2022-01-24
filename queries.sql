@@ -87,4 +87,4 @@ WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT DESC LIMIT 
 -- perfomance and optimazitaion
 explain analyze select distinct(count(*)) from visits where animal_id = 4;
 
-explain analyze select distinct * from visits where vet_id = 2
+explain analyze select distinct vet_id from visits where vet_id = 2
