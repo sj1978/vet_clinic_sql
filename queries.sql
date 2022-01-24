@@ -85,5 +85,6 @@ JOIN animals ON animals.id = visits.animal_id JOIN species ON species.id = anima
 WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT DESC LIMIT 1;
 
 -- perfomance and optimazitaion
-select distinct(count(*)) from visits where animal_id = 4;
+explain analyze select distinct(count(*)) from visits where animal_id = 4;
 
+explain analyze select distinct * from visits where vet_id = 2
