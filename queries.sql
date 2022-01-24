@@ -88,3 +88,5 @@ WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT DESC LIMIT 
 explain analyze select distinct(count(*)) from visits where animal_id = 4;
 
 explain analyze select distinct vet_id from visits where vet_id = 2
+
+explain analyze select email from owners where email = 'owner_18327@mail.com';
