@@ -29,4 +29,11 @@ CREATE TABLE visits( vet_id INT ,
                     date_of_visit DATE,
                     PRIMARY KEY(vet_id,animal_id),
                     CONSTRAINT fk_vet FOREIGN KEY(vet_id) REFERENCES vets(id), 
-                    CONSTRAINT  fk_animals FOREIGN KEY(animal_id) REFERENCES animals(id));
+                    CONSTRAINT  fk_animals FOREIGN KEY(animal_id) REFERENCES animals(id))
+                    ;
+                    
+                    
+/--------------------------------------/
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+CREATE INDEX visits_vets_id_asc ON visits(vets_id ASC);
